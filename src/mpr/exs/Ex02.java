@@ -17,8 +17,12 @@ public class Ex02 {
 	public static void main(String[] args) {
 		int numOfPrimes = 20;
 		List<Integer> primes = PrimesGen.genPrimes(numOfPrimes);
-		for (int pn : primes) {
-			System.out.printf("%d ", pn);
+		ListIterator<Integer> iterator = primes.listIterator(numOfPrimes);
+		for (int i = 0; i < 10; i++) {
+			if (iterator.hasPrevious()) {
+				System.out.printf("%d ", iterator.previous());
+			}
+			
 		}
 		System.out.println();
 	}
