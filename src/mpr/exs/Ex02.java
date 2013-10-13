@@ -1,4 +1,7 @@
 package mpr.exs;
+
+import java.util.*;
+
 /*
  * a) Zmodyfikuj kod „generatora liczb pierwszych” PrimesGen tak, żeby
  *    zamiast tablic wykorzystywał listy. W szczególności wynikiem metody
@@ -13,7 +16,7 @@ public class Ex02 {
 
 	public static void main(String[] args) {
 		int numOfPrimes = 20;
-		int[] primes = PrimesGen.genPrimes(numOfPrimes);
+		List<Integer> primes = PrimesGen.genPrimes(numOfPrimes);
 		for (int pn : primes) {
 			System.out.printf("%d ", pn);
 		}
